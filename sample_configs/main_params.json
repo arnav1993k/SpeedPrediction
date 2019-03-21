@@ -1,0 +1,22 @@
+{"model_params": {
+                  "n_layers": 2,
+                  "h_size": 512,
+                  "encoder_name": "Resnet50"
+                },
+  "train_params": {
+                  "data_path": "/raid/Image/Speed Prediction/data/train/",
+                  "batch_size": 32,
+                  "save_path" : "./checkpoints/new_model.pt",
+                  "imsize": "(224,224)",
+                  "crop_szie": "(200,420)",
+                  "stride": 5,
+                  "timeframe": 10,
+                  "num_epochs": 100
+                },
+  "infer_params": {
+                  "data_path": "/raid/Image/Speed Prediction/data/test/",
+                  "model_save_path": "./checkpoints/new_model.pt",
+                  "batch_size": 32,
+                  "output_path": "./test_output.txt"
+                }
+}
